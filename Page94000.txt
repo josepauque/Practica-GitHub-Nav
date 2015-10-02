@@ -1,0 +1,70 @@
+OBJECT Page 94000 D-Project List
+{
+  OBJECT-PROPERTIES
+  {
+    Date=02/10/15;
+    Time=11:07:16;
+    Modified=Yes;
+    Version List=DO1.1.0;
+  }
+  PROPERTIES
+  {
+    SourceTable=Table94000;
+    PageType=List;
+    CardPageID=D-Project Card;
+    ActionList=ACTIONS
+    {
+      { 1000000004;  ;ActionContainer;
+                      ActionContainerType=ActionItems }
+      { 1000000007;1 ;Action    ;
+                      CaptionML=ESP=AutoDiscover;
+                      Promoted=Yes;
+                      PromotedIsBig=Yes;
+                      Image=WorkCenterLoad;
+                      PromotedCategory=Process;
+                      OnAction=VAR
+                                 DTManagement@1000000000 : Codeunit 94000;
+                               BEGIN
+                                 DTManagement.AutoDiscoverObjects('');
+                               END;
+                                }
+    }
+  }
+  CONTROLS
+  {
+    { 1000000000;0;Container;
+                ContainerType=ContentArea }
+
+    { 1000000001;1;Group  ;
+                Name=Group;
+                GroupType=Repeater }
+
+    { 1000000002;2;Field  ;
+                SourceExpr="No." }
+
+    { 1000000003;2;Field  ;
+                SourceExpr=Description }
+
+    { 1000000008;2;Field  ;
+                SourceExpr="Number of Objects" }
+
+    { 1000000009;2;Field  ;
+                SourceExpr=Blocked }
+
+    { 1000000005;0;Container;
+                ContainerType=FactBoxArea }
+
+    { 1000000006;1;Part   ;
+                SubPageLink=No.=FIELD(No.);
+                PagePartID=Page94005;
+                PartType=Page }
+
+  }
+  CODE
+  {
+
+    BEGIN
+    END.
+  }
+}
+
