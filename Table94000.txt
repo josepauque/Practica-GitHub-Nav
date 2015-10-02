@@ -3,7 +3,7 @@
   OBJECT-PROPERTIES
   {
     Date=02/10/15;
-    Time=11:17:40;
+    Time=12:02:10;
     Modified=Yes;
     Version List=DO1.2.0;
   }
@@ -44,7 +44,7 @@
     { 51  ;   ;Object Type Filter  ;Option        ;FieldClass=FlowFilter;
                                                    OptionString=Tabledata,Table,Form,Report,DONTKNOW,Codeunit,XMLport,MenuSuite,Page,Query }
     { 52  ;   ;Object Range Filter ;Integer       ;FieldClass=FlowFilter }
-    { 53  ;   ;Blocked             ;Boolean        }
+    { 53  ;   ;Blocked             ;Option        ;OptionString=bloqueado,sembloqueado,desbloqueado }
   }
   KEYS
   {
